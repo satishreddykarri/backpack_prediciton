@@ -14,7 +14,7 @@ if uploaded_model:
     with open("best_classification_model.pkl", "wb") as f:
         f.write(uploaded_model.getbuffer())
 
-    model = load_model("temp_model")
+    model = load_model("best_classification_model")
     st.success("Model uploaded and loaded successfully!")
 
     # Dynamically ask for feature inputs
